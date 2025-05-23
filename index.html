@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waste Pickup Tracker</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('1000012668.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .container {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin: 60px auto;
+      width: 80%;
+      border-radius: 15px;
+    }
+    h1 {
+      color: green;
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px #555;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1rem;
+      width: 200px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: linear-gradient(145deg, #76d275, #43a047);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 3px 3px 6px #aaa;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/3645/3645852.png" alt="Dustbin Icon" width="50" />
+      Waste Pickup Tracker
+    </h1>
+    <input type="text" id="pincode" placeholder="Enter Pincode" />
+    <br />
+    <button onclick="goToMap()">Check Schedule</button>
+  </div>
+
+  <script>
+    function goToMap() {
+      const pincode = document.getElementById('pincode').value;
+      if (pincode) {
+        window.location.href = `map.html?pincode=${pincode}`;
+      } else {
+        alert('Please enter a pincode.');
+      }
+    }
+  </script>
+</body>
+</html>
+>
